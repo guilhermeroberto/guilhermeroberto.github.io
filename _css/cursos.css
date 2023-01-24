@@ -1,0 +1,47 @@
+.cursos-idiomas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 40px 10px;
+}
+
+.ci-items p {
+  margin-bottom: 20px;
+  color: rgb(143, 143, 143);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.ci-items p::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: -3px;
+  left: -30px;
+}
+
+.ci-items p.cursos-int::before {
+  background: url("/img/cursos.svg");
+}
+
+.ci-items p.idiomas::before {
+  background: url("/img/idiomas.svg");
+}
+
+.ci-items span {
+  color: rgb(143, 143, 143);
+}
+
+.ci-flex ul li {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.ci-flex-idiomas ul li {
+  list-style: none;
+  color: white;
+  font-size: 1.1rem;
+}
