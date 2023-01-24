@@ -1,0 +1,79 @@
+section.formacao {
+  background-color: rgb(59, 59, 59);
+}
+
+#formacao-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  margin: 0 auto;
+  padding: 120px 20px;
+}
+
+.formacao-text h2 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: black;
+  word-break: break-all;
+  max-width: 3.5ch;
+  line-height: 140px; /* Espaçamento entre as letras */
+}
+
+.formacao-right {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.formacao-p p {
+  font-size: 1.5rem;
+  max-width: 40ch;
+  margin-bottom: 30px;
+  color: rgb(143, 143, 143);
+}
+
+.formacao-p b {
+  color: white;
+}
+
+.formacao-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.formacao-item {
+  color: white;
+  background-color: black;
+  align-self: center;
+  height: 150px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+p.formacao-title {
+  text-transform: uppercase;
+  color: rgb(143, 143, 143);
+}
+
+p.formacao-empresa {
+  font-size: 1.2rem;
+  position: relative;
+  flex: 1; /* Olhar no curso pra ver novamente a funcionalidade */
+}
+
+p.formacao-empresa::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(rgb(128, 179, 128), rgb(39, 99, 21));
+  width: 5px;
+  height: 20px;
+  left: -15px;
+}
+
+p.formacao-universidade {
+  color: rgb(143, 143, 143);
+}
