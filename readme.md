@@ -2,4 +2,4 @@
 
 **HTML e CSS para Iniciantes**
 
-- [x] Projeto Portfolio
+- [x] [Projeto Portfolio](https://guilhermeroberto.github.io/projeto-portfolio/)
