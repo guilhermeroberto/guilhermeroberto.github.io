@@ -1,0 +1,31 @@
+/* Header, footer e CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz o valor de padding não somar com o max-width */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Aceitar cor de classes pré-definidas no Pai */
+}

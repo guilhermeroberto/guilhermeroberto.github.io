@@ -1,0 +1,183 @@
+#orcamento {
+    background: linear-gradient(var(--cor-11) 600px, var(--cor-1) 0px);
+}
+
+.orcamento {
+    display: grid;
+    grid-template-columns: 5fr 7fr; /* 5/7 colunas */
+    padding-bottom: 120px;
+}
+
+.orcamento h2 {
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.orcamento h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    background-color: var(--cor-p1);
+    position: absolute;
+    left: -12px;
+}
+
+.orcamento-produto, .orcamento-dados {
+    padding: 60px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.orcamento-produto {
+    border-radius: 5px 0 0 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    gap: 20px;
+    background: var(--cor-12) url('../../img/dec/bottom-left.svg') no-repeat bottom 20px left 20px;
+}
+
+.orcamento-dados {
+    border-radius: 0 5px 5px 0;
+    background: var(--cor-0) url('../../img/dec/bottom-right.svg') no-repeat bottom 20px right 20px;
+}
+
+.orcamento-produto > * { /* Todos elementos da div */
+    grid-column: 1/-1;
+}
+
+.orcamento-produto > label { /* Todas labels da div */
+    grid-column: initial;
+}
+
+.orcamento-produto input:focus + label { /* Quando o input está em foco (selecionado) é selecionado a label */
+    box-shadow: 0 0 0 2px var(--cor-p1);
+    border: 1px solid var(--cor-12);
+}
+
+.orcamento-produto label:hover {
+    background-color: var(--cor-9);
+    border-color: var(--cor-9);
+}
+
+.orcamento-produto label {
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+    color: var(--cor-4);
+    background-color: var(--cor-10);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--cor-10);
+}
+
+.orcamento-produto label::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box; /* Tira o width que soma com o valor do border, e deixa somente com 12px originalmente */
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--cor-6);
+    border-radius: 50%; /* Arrendoda o elemento */
+    margin-right: 8px;
+}
+
+.orcamento-produto input:checked + label::before {
+    border-color: var(--cor-7);
+    box-shadow: inset 0 0 0 3px var(--cor-0), inset 0 0 0 6px var(--cor-7);
+}
+
+.orcamento-produto input:checked + label { /* Quando o input é selecionado, a label que vem após é alterada */
+    /* display: none; */
+    background: var(--cor-0);
+    color: var(--cor-11);
+}
+
+.orcamento-produto input {
+    opacity: 0;
+    position: absolute; /* Ele continua sendo um elemento, clicável em cima */
+    pointer-events: none; /* Só o elemento em sí pode ser clicado agr */
+}
+
+.orcamento-produto label span {
+    display: none;
+}
+
+.orcamento-produto input:checked + label span { /* Seleciona o label e span */
+    display: block;
+}
+
+/* input#bikcraft:checked + label {  Quando o elemento está selecionado, seleciona a Label 
+    margin-bottom: 200px;
+} */
+
+/* input#bikcraft:checked + label + input + label + #orcamento-bikcraft { /* Seleciona a label que vem depois, o input, a outra label e por fim o elemento
+    display: block;
+} */
+
+.orcamento-conteudo {
+    display: none;
+}
+
+.orcamento-conteudo h2, .orcamento-dados h2:nth-of-type(n + 2) {
+    margin-top: 20px;
+}
+
+input#bikcraft:checked ~ #orcamento-bikcraft, input#seguro:checked ~ #orcamento-seguro {
+    display: grid;
+    gap: 20px;
+}
+
+.orcamento-detalhes {
+    background: var(--cor-0);
+    padding: 20px;
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    border-radius: 4px;
+    align-items: center;
+    display: none;
+}
+
+.orcamento-detalhes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.orcamento-detalhes li img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+.orcamento-produto input:checked + label + .orcamento-detalhes {
+    display: grid;
+}
+
+@media (max-width: 1200px) {
+    .orcamento-produto, .orcamento-dados {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 800px) {
+    .orcamento {
+        grid-template-columns: 1fr;
+    }
+    .orcamento-produto {
+        border-radius: 5px 5px 0 0;
+        background: var(--cor-12);
+    }
+    .orcamento-dados {
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .orcamento-produto {
+        grid-template-columns: 1fr;
+    }
+}
