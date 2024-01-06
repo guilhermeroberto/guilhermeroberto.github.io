@@ -1,4 +1,4 @@
-# Projeto Flexblog
+# Projeto FlexBlog
 
 Projeto feito através do curso [Origamid](https://www.origamid.com/) Front-End
 
