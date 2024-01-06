@@ -1,4 +1,4 @@
-# PROJETO DO CURSO [ORIGAMID](https://www.origamid.com/) DE FRONT-END
+# PROJETOS DO CURSO [ORIGAMID](https://www.origamid.com/) DE FRONT-END
 
 **HTML e CSS para Iniciantes**
 
